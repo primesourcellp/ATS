@@ -29,23 +29,23 @@
     
     
     // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+        $('.back-to-top').fadeIn('slow');
+    } else {
+        $('.back-to-top').fadeOut('slow');
+    }
+});
+$('.back-to-top').click(function () {
+    $('html, body').animate({scrollTop: 0}, 10, 'easeInOutExpo'); // faster scroll
+    return false;
+});
 
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
+        smartSpeed: 500,
         items: 1,
         dots: false,
         loop: true,
